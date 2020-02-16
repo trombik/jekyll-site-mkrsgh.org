@@ -1,0 +1,16 @@
+{% assign content = include.content %}
+{% assign author = include.author | default: "Someone" %}
+
+{% if content %}
+<div class="card">
+  <div class="card-header">{{ site.data.l10n['Quote'].text }}</div>
+  <div class="card-body">
+    <blockquote>
+      <p class="card-text text-left font-italic">
+      "{{ content }}"
+      </p>
+      <footer class="card-title text-right">{{ author }}</footer>
+    </blockquote>
+  </div>
+</div>
+{% endif %}

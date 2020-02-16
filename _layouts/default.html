@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ site.active_lang }}">
+
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">{{ site.description }} </span>
+    <span class="site-heading-lower">{{ site.title }}</span>
+  </h1>
+
+{% include navigation.html %}
+
+
+    {{ content }}
+
+  <footer class="footer text-faded text-center py-5">
+    <div class="container">
+      <p class="m-0 small">Copyright &copy; {{ site.author }} 2019</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  {{ page.post_script }}
+  {% include components/ga_analytics.html %}
+</body>
+</html>

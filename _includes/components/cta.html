@@ -1,0 +1,23 @@
+{% assign type = include.type | default "cta" %}
+{% assign heading_upper = include.heading_upper %}
+{% assign heading_lower = include.heading_lower %}
+{% assign content = include.content %}
+{% assign section_heading_size = include.section_heading_size | default: "mb-4" %}
+
+{% if content %}
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner text-center rounded">
+            <h2 class="section-heading {{ section_heading_size }}">
+              <span class="section-heading-upper">{{ heading_upper }}</span>
+              <span class="section-heading-lower">{{ heading_lower }}</span>
+            </h2>
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}

@@ -1,0 +1,59 @@
+---
+layout: default
+title: Blog
+lang: en
+# archive page is not crawled by search engines
+sitemap: false
+---
+<section class="post-section">
+    <div class="container">
+        <div class="col-xl-9 col-lg-10 mx-auto bg-faded rounded p-5">
+{% for post in paginator.posts %}
+            <a class="text-dark" href="{{ post.url }}">
+            <div class="post-title">
+                <h2>{{ post.title }}</h2>
+            </div class="post-title">
+            <p>{{ site.data.l10n['Published'].text }}: {{ post.date | date: '%Y/%m/%d' }}</p>
+            <div class="post-img">
+              {% if post.image %}
+                {% include components/feature-image.html image = post.image %}
+              {% else %}
+                {% include components/feature-image.html
+                    image = 'img/default.jpg'
+                    unsplash_author = "kimberlyfarmer"
+                %}
+              {% endif %}
+            </div>
+            </a>
+            {% if post.description %}
+              <div class="post-description"><p>{{ post.description | strip_html }}</p></div>
+            {% endif %}
+            <div class="post-excerpt">
+              <p>{{ post.excerpt | strip_html }}</p>
+            </div>
+            <hr />
+{% endfor %}
+        </div>
+    </div>
+  <div class="container">
+    <div class="pagination">
+      <div class="col-xl-9 col-lg-10 mx-auto bg-faded rounded p-5">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">
+          Previous
+        </a>
+        {% else %}
+        <span class="previous">Previous</span>
+        {% endif %}
+        <span class="page_number ">
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+        </span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% else %}
+        <span class="next ">Next</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

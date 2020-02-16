@@ -1,0 +1,11 @@
+---
+- name: Home
+  href: /
+- name: About
+  href: /about/
+- name: Products
+  href: /products/
+- name: Store
+  href: /store/
+- name: Blog
+  href: /blog/

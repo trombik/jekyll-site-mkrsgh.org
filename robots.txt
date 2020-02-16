@@ -1,0 +1,12 @@
+---
+permalink: /robots.txt
+---
+Sitemap: {{ site.url }}/sitemap.xml
+{% if site.active_lang == site.default_lang -%}
+{%   for l in site.languages -%}
+{%     if l == site.default_lang -%}
+{%       continue -%}
+{%     endif -%}
+Sitemap: {{ site.url }}/{{ l }}/sitemap.xml
+{%   endfor -%}
+{% endif -%}

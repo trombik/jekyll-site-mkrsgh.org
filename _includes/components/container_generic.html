@@ -1,0 +1,32 @@
+{% assign content = include.content %}
+{% assign heading_upper = include.heading_upper %}
+{% assign heading_lower = include.heading_lower %}
+{% assign img_alt = include.img_alt %}
+{% assign img_src = include.img_src %}
+{% assign link_button_enable = include.link_button_enable | default: false %}
+{% assign link_button_text = include.link_button_text %}
+{% assign link_button_href = include.link_button_href %}
+
+  <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        {% if img_src %}
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ img_src }}" alt="{{ img_alt }}">
+        {% endif %}
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">{{ heading_upper }}</span>
+            <span class="section-heading-lower">{{ heading_lower }}</span>
+          </h2>
+          <p class="mb-3">{{ content }}</p>
+          {% if link_button_enable %}
+              {% include components/link_button.html
+                class = "intro-button"
+                href = link_button_href
+                text = link_button_text
+              %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>

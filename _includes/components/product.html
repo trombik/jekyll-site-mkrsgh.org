@@ -1,0 +1,36 @@
+<!-- _includes/components/product.html -->
+{% assign type = include.type | default: "pruduct" %}
+{% assign heading_upper = include.heading_upper %}
+{% assign heading_lower = include.heading_lower %}
+{% assign description = include.description %}
+{% assign img_src = include.img_src %}
+{% assign img_alt = include.img_alt | default: "Product image" %}
+
+{% assign allign = include.allign | default: "left" %}
+{% if allign == "left" %}
+    {% assign spacing_heading = "ml-auto" %}
+    {% assign spacing_description = "mr-auto" %}
+{% else %}
+    {% assign spacing_heading = "mr-auto" %}
+    {% assign spacing_description = "ml-auto" %}
+{% endif %}
+  <section class="page-section">
+    <div class="container">
+      <div class="product-item">
+        <div class="product-item-title d-flex">
+          <div class="bg-faded p-5 d-flex {{ spacing_heading }} rounded">
+            <h2 class="section-heading mb-0">
+              <span class="section-heading-upper">{{ heading_upper }}</span>
+              <span class="section-heading-lower">{{ heading_lower }}</span>
+            </h2>
+          </div>
+        </div>
+        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ img_src }}" alt="{{ img_alt }}">
+        <div class="product-item-description d-flex {{ spacing_description }}">
+          <div class="bg-faded p-5 rounded">
+            <p class="mb-0">{{ description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

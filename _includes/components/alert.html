@@ -1,0 +1,16 @@
+{% assign text = include.text %}
+{% assign class = include.class | default: "primary" %}
+{% assign title = include.title %}
+{% assign heading = include.heading %}
+
+{% if text %}
+<div class="alert alert-{{ class }}" role="alert">
+    {% if heading %}
+    <h4 class="alert-heading">{{ heading }}</h4>
+    {% endif %}
+    <p>
+    {% if title %}<strong>{{ title }}</strong>{% endif %}
+    {{ text }}
+    </p>
+</div>
+{% endif %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ site.active_lang }}">
+
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">{{ site.description }} </span>
+    <span class="site-heading-lower">{{ site.title }}</span>
+  </h1>
+
+{% include navigation.html %}
+
+<section class="post-section clearfix">
+    <div class="container">
+        <div class="intro-text col-lg-10 mx-auto bg-faded rounded p-5">
+        <h1>
+            {{ page.title }}
+        </h1>
+        <p>{{ site.data.l10n['Published'].text }}: {{ page.date | date: '%Y/%m/%d' }} {{ site.data.l10n['Tags'].text }}:
+            {% for tag in page.tags %}
+            <a href="/blog/tag/{{ tag }}"><span class="badge badge-secondary">{{ tag | upcase }}</span></a>
+            {% endfor %}
+        </p>
+        {% if page.description %}
+          <p>{{ page.description }}</p>
+        {% endif %}
+        {% include components/feature-image.html %}
+        <section class="content-section">
+            {{ content }}
+        </section>
+        </div>
+    </div>
+</section>
+
+  <footer class="footer text-faded text-center py-5">
+    <div class="container">
+      <p class="m-0 small">Copyright &copy; {{ site.author }} 2019</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  {{ page.post_script }}
+</body>
+</html>
+

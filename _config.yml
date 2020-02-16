@@ -1,0 +1,90 @@
+---
+
+title: My Cafe
+description: Coffee and Tea
+author: Tomoyuki Sakurai
+project_author:
+  twitter:
+    id: '@ytrombik'
+  github:
+    id: "@trombik"
+  site:
+    url: http://www.trombik.org/
+timezone: Asia/Bangkok
+encoding: UTF-8
+url: http://jekyll-aws.s3-website-ap-northeast-1.amazonaws.com
+meta:
+  description: My Cafe in an unknown city
+permalink: blog/:categories/:year/:month/:day/:title/
+paginate: 5
+paginate_path: "blog/archives/:num/"
+
+plugins:
+  - jekyll-responsive-image
+  - jekyll-archives
+  - jekyll-polyglot
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-twitter-plugin
+  - jekyll-paginate
+exclude:
+  - LICENSE
+  - ORIGINAL_README.md
+  - package-lock.json
+  - package.json
+  - gulpfile.js
+  - README.md
+  - css/flag-icon-css/index.html
+  - "img/*.orig.*"
+
+highlighter: rouge
+
+# i18n and l10n
+languages: ["en", "ja", "th"]
+default_lang: "en"
+exclude_from_localization:
+  - js
+  - img
+  - css
+  - scss
+  - node_modules
+  - vendor
+  - flags
+  - favicon.ico
+parallel_localization: true
+
+# archives
+jekyll-archives:
+  enabled:
+    - tags
+  layout: tag
+  permalinks:
+    tag: "/blog/tag/:name/"
+
+# GA
+project:
+  ga_analytics_id: ""
+
+# jekyll-responsive-image
+responsive_image:
+  template: _includes/imager-js.html
+  sizes:
+    - width: 480
+    - width: 800
+    - width: 1400
+  strip: true
+  base_path: assets
+
+# jekyll-feed
+feed:
+  path: feed/atom.xml
+
+project:
+  blog:
+    default:
+      # image to display when a post does not have `image` in front matter
+      image:
+        path: img/default.jpg
+        # unsplash user name of the default image above. set empty if the
+        # default image is not from unsplash users. see: https://unsplash.com/
+        unsplash_author: kimberlyfarmer

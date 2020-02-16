@@ -1,0 +1,11 @@
+---
+- name: ホーム
+  href: /
+- name: 私たちについて
+  href: /about/
+- name: 商品
+  href: /products/
+- name: 店舗
+  href: /store/
+- name: ブログ
+  href: /blog/
