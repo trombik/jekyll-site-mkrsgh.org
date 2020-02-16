@@ -3,13 +3,14 @@
 {% assign heading_lower = include.heading_lower %}
 {% assign content = include.content %}
 {% assign section_heading_size = include.section_heading_size | default: "mb-4" %}
+{% assign text_align = include.text_align | default: "center" %}
 
 {% if content %}
-  <section class="page-section cta">
+  <section class="page-section cta clearfix">
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <div class="cta-inner text-center rounded">
+          <div class="cta-inner text-{{ text_align }} rounded">
             <h2 class="section-heading {{ section_heading_size }}">
               <span class="section-heading-upper">{{ heading_upper }}</span>
               <span class="section-heading-lower">{{ heading_lower }}</span>
