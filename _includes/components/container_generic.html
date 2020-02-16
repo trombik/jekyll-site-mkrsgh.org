@@ -6,6 +6,13 @@
 {% assign link_button_enable = include.link_button_enable | default: false %}
 {% assign link_button_text = include.link_button_text %}
 {% assign link_button_href = include.link_button_href %}
+{% assign text_align = include.text_align | default: "center" %}
+{% assign text_layout = include.text_layout | default: "left" %}
+{% if text_layout == "left %}
+{% assign img_layout = "right" %}
+{% else %}
+{% assign img_layout = "left" %}
+{% endif %}
 
   <section class="page-section clearfix">
     <div class="container">
@@ -13,7 +20,7 @@
         {% if img_src %}
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ img_src }}" alt="{{ img_alt }}">
         {% endif %}
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <div class="intro-text {{ text_layout }}-0 text-{{ text_align }} bg-faded p-5 rounded">
           <h2 class="section-heading mb-4">
             <span class="section-heading-upper">{{ heading_upper }}</span>
             <span class="section-heading-lower">{{ heading_lower }}</span>
