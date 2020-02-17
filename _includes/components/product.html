@@ -7,7 +7,7 @@
 {% assign img_alt = include.img_alt | default: "Product image" %}
 {% assign link_button_enable = include.link_button_enable | default: false %}
 {% assign link_button_text = include.link_button_text %}
-{% assign link_button_href = site.baseurl | default: '/' | append: include.link_button_href %}
+{% assign link_button_href = include.link_button_href %}
 {% assign link_button_size = include.link_button_size | default 'sm'
 
 {% assign allign = include.allign | default: "left" %}
