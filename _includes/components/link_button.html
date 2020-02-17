@@ -1,10 +1,12 @@
 {% assign type = include.type | default "link_button" %}
-{% assign class = "link_button" | append: include.class %}
+{% assign class = "link_button " | append: include.class %}
 {% assign href = include.href %}
 {% assign text = include.text %}
+{% assign size = include.size | default: "xl" %}
+{% assign align = include.align | default: "right" %}
 
 {% if text %}
-<div class="{{ class }} mx-auto">
-  <a class="btn btn-primary btn-xl" href="{{ href }}">{{ text }}</a>
+<div class="{{ class }} mx-auto text-{{ align }}">
+    <a class="btn btn-primary btn-{{ size }}" href="{{ site.baseurl | default: '/' }}{{ href }}">{{ text }}</a>
 </div>
 {% endif %}
