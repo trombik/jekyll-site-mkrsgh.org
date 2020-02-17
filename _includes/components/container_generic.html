@@ -6,6 +6,7 @@
 {% assign link_button_enable = include.link_button_enable | default: false %}
 {% assign link_button_text = include.link_button_text %}
 {% assign link_button_href = include.link_button_href %}
+{% assign link_button_align = include.link_button_align | default: "center" %}
 {% assign text_align = include.text_align | default: "center" %}
 {% assign text_layout = include.text_layout | default: "left" %}
 {% if text_layout == "left %}
@@ -31,6 +32,7 @@
                 class = "intro-button"
                 href = link_button_href
                 text = link_button_text
+                align = link_button_align
               %}
           {% endif %}
         </div>
