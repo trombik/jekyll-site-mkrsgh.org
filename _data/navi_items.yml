@@ -8,7 +8,7 @@
     - name: Our facilities
       href: products/
     - name: Rooms
-      href: rooms/
+      href: products/rooms/
     - name: Makerspace
       href: products/makerspace/
 - name: Store
