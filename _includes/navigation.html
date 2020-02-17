@@ -8,9 +8,22 @@
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav mx-auto">
       {% for item in site.data.navi_items %}
+      {% if item.subitems %}
+      <div class="dropdown">
+          <li class="nav-item px-lg-4 {% if page.url == item.href %}active{% endif %}">
+              <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.name }}</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {% for subitem in item.subitems %}
+                  <a class="dropdown-item" href="{{ site.baseurl | default: '/' }}{{ subitem.href }}">{{ subitem.name }}</a>
+                  {% endfor %}
+              </div>
+          </li>
+      </div>
+      {% else %}
       <li class="nav-item px-lg-4 {% if page.url == item.href %}active{% endif %}">
-          <a class="nav-link text-uppercase text-expanded" href="{{ item.href }}">{{ item['name'] }} {% if page.url == item.href %}<span class="sr-only">(current)</span>{% endif %}</a>
+          <a class="nav-link text-uppercase text-expanded" href="{{ site.baseurl | default: '/' }}{{ item.href }}">{{ item['name'] }} {% if page.url == item.href %}<span class="sr-only">(current)</span>{% endif %}</a>
       </li>
+      {% endif %}
       {% endfor %}
       <!-- dropdown -->
       <li class="nav-item px-lg-4 dropdown">

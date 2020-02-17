@@ -2,10 +2,16 @@
 - name: ホーム
   href: /
 - name: 私たちについて
-  href: /about/
-- name: 商品
-  href: /products/
+  href: about/
+- name: 施設
+  subitems:
+    - name: 施設
+      href: products/
+    - name: お部屋
+      href: rooms/
+    - name: メーカースペース
+      href: products/makerspace/
 - name: 店舗
-  href: /store/
+  href: store/
 - name: ブログ
-  href: /blog/
+  href: blog/

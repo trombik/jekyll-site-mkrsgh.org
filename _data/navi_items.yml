@@ -1,11 +1,17 @@
 ---
 - name: Home
-  href: /
+  href: ""
 - name: About
-  href: /about/
-- name: Products
-  href: /products/
+  href: about/
+- name: Facilities
+  subitems:
+    - name: Our facilities
+      href: products/
+    - name: Rooms
+      href: rooms/
+    - name: Makerspace
+      href: products/makerspace/
 - name: Store
-  href: /store/
+  href: store/
 - name: Blog
-  href: /blog/
+  href: blog/
