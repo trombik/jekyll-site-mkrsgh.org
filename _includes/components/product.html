@@ -8,13 +8,13 @@
 {% assign link_button_enable = include.link_button_enable | default: false %}
 {% assign link_button_text = include.link_button_text %}
 {% assign link_button_href = include.link_button_href %}
-{% assign link_button_size = include.link_button_size | default 'sm'
+{% assign link_button_size = include.link_button_size | default 'sm' %}
 
-{% assign allign = include.allign | default: "left" %}
-{% if allign == "left" %}
+{% assign layout = include.layout | default: "left-first" %}
+{% if layout == "left-first" %}
     {% assign spacing_heading = "ml-auto" %}
     {% assign spacing_description = "mr-auto" %}
-{% else %}
+{% else if layout == "right-first" %}
     {% assign spacing_heading = "mr-auto" %}
     {% assign spacing_description = "ml-auto" %}
 {% endif %}
