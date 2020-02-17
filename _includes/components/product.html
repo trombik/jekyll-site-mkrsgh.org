@@ -5,6 +5,10 @@
 {% assign description = include.description %}
 {% assign img_src = include.img_src %}
 {% assign img_alt = include.img_alt | default: "Product image" %}
+{% assign link_button_enable = include.link_button_enable | default: false %}
+{% assign link_button_text = include.link_button_text %}
+{% assign link_button_href = site.baseurl | default: '/' | append: include.link_button_href %}
+{% assign link_button_size = include.link_button_size | default 'sm'
 
 {% assign allign = include.allign | default: "left" %}
 {% if allign == "left" %}
@@ -29,6 +33,14 @@
         <div class="product-item-description d-flex {{ spacing_description }}">
           <div class="bg-faded p-5 rounded">
             <p class="mb-0">{{ description }}</p>
+            {% if link_button_enable %}
+                {% include components/link_button.html
+                  class = "intro-button"
+                  href = link_button_href
+                  text = link_button_text
+                  size = link_button_size
+                %}
+            {% endif %}
           </div>
         </div>
       </div>
