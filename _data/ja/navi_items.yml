@@ -8,7 +8,7 @@
     - name: 施設
       href: products/
     - name: お部屋
-      href: rooms/
+      href: products/rooms/
     - name: メーカースペース
       href: products/makerspace/
     - name: ネットワーク
