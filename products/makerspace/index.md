@@ -5,6 +5,7 @@ lang: en
 desciption: |
     Our Makerspace is built for making things. Here, we introduce the
     facilities and instruments.
+image: img/products-02.jpg
 
 ---
 
@@ -39,7 +40,7 @@ the joy of building <strong>things</strong> and making something work.
 
 Topics include:
 
-* General Unix administration
 * Embedded programming
 * Sensors and IoT devices
 * Networking and integrations in Unix and IoT
+* General Unix administration
