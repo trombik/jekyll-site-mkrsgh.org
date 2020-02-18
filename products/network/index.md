@@ -23,7 +23,7 @@ balconies, the front yard, and the back yard.
 
 Our uplink is provided by one of the best enterprise ISP, SINET. The fibre
 optic line provides <em>true</em> FTTH with symmetric bandwidth (60 Mbps for
-both directions, 120 Mbps in total). THe ISP provides responsible 24/7
+both directions, 120 Mbps in total). The ISP provides responsible 24/7
 support in case of issues.
 
 If you are a digital nomad, enjoy nice atmosphere at local cafes (there are
