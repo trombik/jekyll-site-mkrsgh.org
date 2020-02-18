@@ -14,7 +14,7 @@ timezone: Asia/Bangkok
 encoding: UTF-8
 url: http://jekyll-aws.s3-website-ap-northeast-1.amazonaws.com
 meta:
-  description: My Cafe in an unknown city
+  description: Makers Guesthouse Siem Reap
 permalink: blog/:categories/:year/:month/:day/:title/
 paginate: 5
 paginate_path: "blog/archives/:num/"
