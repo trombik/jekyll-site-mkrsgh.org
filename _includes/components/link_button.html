@@ -4,9 +4,18 @@
 {% assign text = include.text %}
 {% assign size = include.size | default: "xl" %}
 {% assign align = include.align | default: "right" %}
+{% assign scheme = href | split: "://" | first %}
+{% case scheme %}
+    {% when "http" %}
+        {% assign baseurl = "" %}
+    {% when "https" %}
+        {% assign baseurl = "" %}
+    {% else %}
+        {% assign baseurl = site.baseurl | default: '/' %}
+{% endcase %}
 
 {% if text %}
 <div class="{{ class }} mx-auto text-{{ align }}">
-    <a class="btn btn-primary btn-{{ size }}" href="{{ site.baseurl | default: '/' }}{{ href }}">{{ text }}</a>
+    <a class="btn btn-primary btn-{{ size }}" href="{{ baseurl }}{{ href }}">{{ text }}</a>
 </div>
 {% endif %}
