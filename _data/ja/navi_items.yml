@@ -11,7 +11,9 @@
       href: rooms/
     - name: メーカースペース
       href: products/makerspace/
-- name: 店舗
+    - name: ネットワーク
+      href: products/network/
+- name: アクセス
   href: store/
 - name: ブログ
   href: blog/
