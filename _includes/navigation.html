@@ -14,14 +14,32 @@
               <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.name }}</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   {% for subitem in item.subitems %}
-                  <a class="dropdown-item" href="{{ site.baseurl | default: '/' }}{{ subitem.href }}">{{ subitem.name }}</a>
+                    {% assign scheme = subitem.href | split: "://" | first %}
+                    {% case scheme %}
+                        {% when "http" %}
+                            {% assign baseurl = "" %}
+                        {% when "https" %}
+                            {% assign baseurl = "" %}
+                        {% else %}
+                            {% assign baseurl = site.baseurl | default: '/' %}
+                    {% endcase %}
+                  <a class="dropdown-item" href="{{ baseurl }}{{ subitem.href }}">{{ subitem.name }}</a>
                   {% endfor %}
               </div>
           </li>
       </div>
       {% else %}
       <li class="nav-item px-lg-4 {% if page.url == item.href %}active{% endif %}">
-          <a class="nav-link text-uppercase text-expanded" href="{{ site.baseurl | default: '/' }}{{ item.href }}">{{ item['name'] }} {% if page.url == item.href %}<span class="sr-only">(current)</span>{% endif %}</a>
+        {% assign scheme = item.href | split: "://" | first %}
+        {% case scheme %}
+            {% when "http" %}
+                {% assign baseurl = "" %}
+            {% when "https" %}
+                {% assign baseurl = "" %}
+            {% else %}
+                {% assign baseurl = site.baseurl | default: '/' %}
+        {% endcase %}
+          <a class="nav-link text-uppercase text-expanded" href="{{ baseurl }}{{ item.href }}">{{ item['name'] }} {% if page.url == item.href %}<span class="sr-only">(current)</span>{% endif %}</a>
       </li>
       {% endif %}
       {% endfor %}
