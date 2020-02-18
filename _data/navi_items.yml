@@ -11,7 +11,9 @@
       href: products/rooms/
     - name: Makerspace
       href: products/makerspace/
-- name: Store
+    - name: Network
+      href: products/network/
+- name: Location
   href: store/
 - name: Blog
   href: blog/
