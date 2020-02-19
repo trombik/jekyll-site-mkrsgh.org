@@ -9,11 +9,12 @@ image: img/products-03.jpg
 
 ## WiFi network
 
-In the spirit of <strong>Maker</strong>, the WiFi and Ethernet network
-are designed, built, and operated by a professional. WiFi signal at every
-room is constantly monitored for possible issues, and visualized for
-trends. We promise to all the guests that your complaints are taken
-seriously and issues will be resolved quickly and effectively.
+Here in <strong>Makers Guesthouse</strong>, in the spirit of
+<strong>Maker</strong>, the WiFi and Ethernet network are designed, built, and
+operated by a professional. WiFi signal at every room is constantly monitored
+for possible issues, and visualized for trends. We promise to all the guests
+that your complaints are taken seriously and issues will be resolved quickly
+and effectively.
 
 Each floor has at least two WiFi access points, with 802.11a/b/g. 802.11n is
 available at the ground floor. The WiFi network covers public area, such as
