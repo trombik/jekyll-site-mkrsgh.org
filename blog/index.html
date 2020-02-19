@@ -13,7 +13,17 @@ sitemap: false
             <div class="post-title">
                 <h2>{{ post.title }}</h2>
             </div class="post-title">
-            <p>{{ site.data.l10n['Published'].text }}: {{ post.date | date: '%Y/%m/%d' }}</p>
+            <p>
+            {% if post.date %}
+              {{ site.data.l10n['Published'].text }}: {{ post.date | date: '%Y/%m/%d' }}
+            {% endif %}
+            {% if post.tags.size > 0 %}
+              {{ site.data.l10n['Tags'].text }}:
+              {% for tag in post.tags %}
+                <a href="/blog/tag/{{ tag }}"><span class="badge badge-secondary">{{ tag | upcase }}</span></a>
+              {% endfor %}
+            {% endif %}
+            </p>
             <div class="post-img">
               {% if post.image %}
                 {% include components/feature-image.html image = post.image %}
