@@ -1,0 +1,21 @@
+<section class="page-section about-heading">
+  <div class="container">
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="bg-faded rounded p-5">
+            <h2 class="section-heading {{ section_heading_size }}">
+              <span class="section-heading-upper">{{ site.data.l10n.['Our SNS accounts'].text }}</span>
+              <span class="section-heading-lower">{{ site.data.l10n['Contact Us'].text }}</span>
+            </h2>
+            <ul>
+              {% for s in site.data.sns %}
+              <li><a href="{{ s.href }}" class="fa fa-{{ s.name }} text-black-50"> {{ s.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
