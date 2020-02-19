@@ -8,8 +8,7 @@ image: img/products-02.jpg
 permalink: products/makerspace/
 ---
 
-メーカースペースは、ご滞在のお客様も在住の皆様もご利用いただけます。営業時間は
-9:000から20:00までです。
+メーカースペースは、ご滞在のお客様も在住の皆様もご利用いただけます。営業時間は{{ site.data.opening_hours.makerspace.open }}から{{ site.data.opening_hours.makerspace.close }}までです。
 
 ## ご利用いただける機材
 
