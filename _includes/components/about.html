@@ -9,7 +9,9 @@
 {% if content %}
   <section class="page-section about-heading">
     <div class="container">
+      {% if img_src %}
       <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{{ img_src }}" alt="{{ img_alt }}">
+      {% endif %}
       <div class="about-heading-content">
         <div class="row">
           <div class="col-xl-9 col-lg-10 mx-auto">
