@@ -9,7 +9,8 @@ image: img/products-02.jpg
 
 ---
 
-The Maker Space is open for guests and local residents, from 9:00 to 20:00.
+The Maker Space is open for guests and local residents, from
+{{ site.data.opening_hours.makerspace.open }} to {{ site.data.opening_hours.makerspace.close }}.
 
 ## Tools and instruments
 
