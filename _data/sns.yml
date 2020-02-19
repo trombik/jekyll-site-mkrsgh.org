@@ -1,12 +1,13 @@
 ---
+- name: whatsapp
+  account: 855965756592
+  href: https://wa.me/855965756592
+- name: phone
+  account: ""
+  href: tel:+855965756592
 - name: twitter
   account: GhMakers
   href: https://twitter.com/GhMakers
 - name: github
   account: trombik
   href: https://github.com/trombik
-- name: whatsapp
-  account: 855965756592
-  href: https://wa.me/855965756592
-- name: phone
-  href: tel:+855965756592
