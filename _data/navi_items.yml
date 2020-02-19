@@ -14,6 +14,6 @@
     - name: Network
       href: products/network/
 - name: Location
-  href: store/
+  href: location/
 - name: Blog
   href: blog/
