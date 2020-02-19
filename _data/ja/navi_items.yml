@@ -1,6 +1,6 @@
 ---
 - name: ホーム
-  href: /
+  href: ""
 - name: 私たちについて
   href: about/
 - name: 施設
