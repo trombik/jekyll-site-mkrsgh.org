@@ -2,3 +2,6 @@
 makerspace:
   open: "10:00"
   close: "19:00"
+hotel:
+  checkin: "14:00"
+  checkout: "11:00"

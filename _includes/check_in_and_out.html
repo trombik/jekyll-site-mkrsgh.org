@@ -1,0 +1,12 @@
+{% assign text_checkin_and_out = site.data.l10n['Check-in and check-out'].text %}
+{% capture text_content %}
+<h4>{{ site.data.l10n['Check-in'].text }}</h4>
+<p>{{ site.data.opening_hours.hotel.checkin }}</p>
+<h4>{{ site.data.l10n['Check-out'].text }}</h4>
+<p>{{ site.data.opening_hours.hotel.checkout }}</p>
+{% endcapture %}
+
+{% include components/about.html
+    heading_lower = text_checkin_and_out
+    content = text_content
+%}
