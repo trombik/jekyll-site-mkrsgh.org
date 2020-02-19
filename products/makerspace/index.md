@@ -32,7 +32,7 @@ Some tools and instruments require skill checks for safe operation.
 * 240V AC
 * Free drinking water
 
-## Learning
+## Workshop
 
 We also teach basics for beginners. Even if you are not a maker (yet),
 you can learn IoT, computer programmings, 3D CAD, and, most importantly,
@@ -43,4 +43,3 @@ Topics include:
 * Embedded programming
 * Sensors and IoT devices
 * Networking and integrations in Unix and IoT
-* General Unix administration
