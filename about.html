@@ -12,11 +12,47 @@ lang: en
     content = '
     <p>Founded in 2020, <em>Makers Guesthouse</em> is the first
     Makerspace in Siem Reap, hoping to provide a creative space for guests,
-
-    local residents, and busines owners, where your can learn mordern
+    local residents, and business owners, where your can learn modern
     technologies, create <strong>things</strong> that help you and others, and
     discover the joy of creation.</p>
     '
 %}
 {% include check_in_and_out.html %}
+
+{% include components/about.html
+    heading_upper = "Please read carefully"
+    heading_lower = "Hotel Policy"
+    content = '
+    <ol>
+        <li><strong>Nothing may be flushed down the toilet.</strong> Charges will occur for any blockage.</li>
+        <li>No drugs, including marijuana.</li>
+        <li>Avoid making noise or disturbing the other guests and neighbors. Keep quiet in common areas after 22:00.</li>
+        <li>Keep rooms locked at all times when absent.</li>
+        <li>No flammables in rooms.</li>
+        <li>Smoking is prohibited in the property, including medical marijuana, vape pens &amp; e-cigarettes.</li>
+        <li>Smoking cigarettes, e-cigarettes, and vape pens, is permitted outside, please place cigarette ends in the ashtray provided.</li>
+        <li>Cleaning of the rooms are performed every day from 10:30 to 12:30.</li>
+        <li>Maximum occupancy for each room must not exceed the number of guests on the original booking.</li>
+        <li>Pets are not permitted. Assistance animals are always welcome. Please let us know if you plan to arrive with an assistance animal.</li>
+    </ol>
+    '
+%}
+{% include components/about.html
+    heading_upper = "Simple and short"
+    heading_lower = "Privacy Policy"
+    content = '
+    <ol>
+        <li>We use Google Analytics on our websites to improve website visitors experience and provide better services. You can opt-out Google Analytics by installing a browser plug-in available at <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">https://tools.google.com/dlpage/gaoptout</a>.</li>
+        <li>Your privacy information is used strictly for booking and services during your stay only.</li>
+        <li>Your privacy information is <strong>NOT</strong> used for our marketing activities unless you explicitly opt-in.</li>
+        <li>Your privacy information is <strong>NOT</strong> be shared by other third-party except the following service providers:
+            <ul>
+                <li>Google for analytics (<a href="https://policies.google.com/privacy" target="_blank">privacy policy</a>)</li>
+                <li>Booking.com for booking management (<a href="https://www.booking.com/content/privacy" target="_blank">privacy policy</a>)</li>
+                <li>Cloudbeds for property management (<a href="https://www.cloudbeds.com/privacy-policy/" target="_blank">privacy policy</a>)</li>
+            </ul>
+        </li>
+    </ol>
+    '
+%}
 {% include sns.html %}
