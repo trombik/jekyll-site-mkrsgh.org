@@ -14,6 +14,41 @@ lang: ja
     '
 %}
 {% include check_in_and_out.html %}
-{% include sns.html %}
-:qa
 
+{% include components/about.html
+    heading_upper = "お読みください"
+    heading_lower = "ホテルポリシー"
+    content = '
+    <ol>
+        <li><strong>トイレには何も流さないでください。</strong> 配管のつまりが発生した場合は修理実費を請求することがあります。</li>
+        <li>マリファナを含むドラッグ類の使用は禁止されています。</li>
+        <li>他のお客様および近隣の迷惑になる行為はお断りします。22:00以降はお静かに願います。</li>
+        <li>不在時には客室の施錠してください。</li>
+        <li>火気の使用は禁止致します。</li>
+        <li>施設内の喫煙(タバコ、電子タバコ、ベイプ リキッド)はお断りします。</li>
+        <li>喫煙(タバコ、電子タバコ、ベイプ リキッド)は所定の場所でお願いしております。</li>
+        <li>客室の清掃は10:30から12:30のに実施します。</li>
+        <li>ご予約の契約人数を超えての客室利用は、お断りします。</li>
+        <li>ペットの滞在はお断りしますが、介助動物は除きます。介助動物が必要なお客様は、事前にご連絡いただけるとスムーズな対応が可能です。</li>
+    </ol>
+    '
+%}
+{% include components/about.html
+    heading_upper = "お預かりする個人情報について"
+    heading_lower = "プライバシーポリシー"
+    content = '
+    <ol>
+        <li>ウェブサイトでは、ユーザビリティの改善およびサービスの向上のためにGoogle Analyticsを使用しています。Google Analyticsはブラウザのプラグインをインストールすると、オプトアウトできます。プラグインは<a href="https://tools.google.com/dlpage/gaoptout" target="_blank">https://tools.google.com/dlpage/gaoptout</a>からダウンロードできます。</li>
+        <li>お客様の個人情報は予約および滞在中のサービス提供にのみ使用します。</li>
+        <li>お客様の個人情報は、お客様が明示的に希望しない限り、当施設のマーケティング活動に<strong>使用されません</strong>。</li>
+        <li>お客様の個人情報は、以下に挙げるサービス提供者を除き、いかなる第三者にも<strong>提供されません</strong>。
+            <ul>
+                <li>Google (ウェブ解析、<a href="https://policies.google.com/privacy" target="_blank">プライバシーポリシー</a>)</li>
+                <li>Booking.com (予約管理、<a href="https://www.booking.com/content/privacy" target="_blank">プライバシーポリシー</a>)</li>
+                <li>Cloudbeds (予約管理、運営管理 <a href="https://www.cloudbeds.com/privacy-policy/" target="_blank">プライバシーポリシー</a>)</li>
+            </ul>
+        </li>
+    </ol>
+    '
+%}
+{% include sns.html %}
