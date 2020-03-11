@@ -20,7 +20,6 @@ paginate: 5
 paginate_path: "blog/archives/:num/"
 
 plugins:
-  - jekyll-responsive-image
   - jekyll-archives
   - jekyll-polyglot
   - jekyll-sitemap
