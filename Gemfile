@@ -21,7 +21,7 @@ if RUBY_VERSION < "2.1"
 end
 
 group :jekyll_plugins do
-  gem "jekyll-responsive-image"
+  # gem "jekyll-responsive-image"
   gem "jekyll-browsersync"
   gem "jekyll-sitemap"
   gem "jekyll-archives"
