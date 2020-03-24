@@ -256,3 +256,4 @@ When Animal Mother met Joker, he said:
     content = "You talk the talk. Do you walk the walk?"
     author = "Animal Mother"
 %}
+คุณโทมี่บอกว่าเขียนอะไรก็ได้ เขียนแล้วค่ะ
