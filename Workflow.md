@@ -230,7 +230,7 @@ You are now ready to commit.
 
 ### Committing
 
-To commit use `git commit`.
+To commit, use `git commit`.
 
 ```
 $ git commit
@@ -280,10 +280,137 @@ working in your local repository. To share your new branch (and merge the
 branch to branch `devel` so that your changes are published), you need to push
 your local repository to the remote repository on `github.com`.
 
+To push a local branch to remote repository, use `git push`.
+
 ```
 $ git status
+On branch documentation
+nothing to commit, working tree clean
+
+$ git push
+fatal: The current branch documentation has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin documentation
 ```
 
+However, the initial `git push` fails. The error message says that you tried
+to `push` the branch, but `git` does not know where to push it because the
+branch has no `upstream` branch. It also explains how to set `upstream`, or
+the destination.
+
+```
+$ git push --set-upstream origin documentation
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.94 KiB | 1002.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'documentation' on GitHub by visiting:
+remote:      https://github.com/trombik/jekyll-site-mkrsgh.org/pull/new/documentation
+remote:
+To github.com:trombik/jekyll-site-mkrsgh.org.git
+ * [new branch]      documentation -> documentation
+Branch 'documentation' set up to track remote branch 'documentation' from 'origin'.
+```
+
+The output says:
+
+* the `push` succeeded without error
+* the destination repository is `github.com:trombik/jekyll-site-mkrsgh.org.git`
+* a new branch has been created in the remote repository, with identical name,
+  `documentation`.
+* the URL to create a "Pull Request", or PR in short
+* `documentation` branch in your local repository is linked to `documentation`
+  branch in the remote repository
+
+Now, open your browser and visit the URL shown. Some fields are pre-filled
+with the commit message. Add more message if you need. Click [Create pull
+request].
+
+When you create a PR, the PR is ready for review. In the review process,
+reviewer may ask you to clarify the changes, to modify your changes, or even
+s/he rejects your changes.
+
+Also, `github` automatically perform some tests. If any of tests fails, your
+branch must be fixed so that the tests pass. Until all the tests pass, your PR
+cannot be merged.
+
+After your change is accepted, you, or others, merge your PR to `devel`. When
+your PR is merged, thus, your changes are merged to `devel`, you may delete
+your local branch and remote branch.
+
+### Pulling the updated `devel` to your local repository
+
+The `devel` branch in the remote repository has your changes now. But `devel`
+in your local repository does not yet. You must `pull` the latest `devel` from
+the remote repository.
+
+First, switch to `devel` branch by `git checkout`.
+
+```
+$ git checkout devel
+Switched to branch 'devel'
+Your branch is up to date with 'origin/devel'.
+```
+
+To pull the latest change, use `git fetch`.
+
+```
+$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 2 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), 2.95 KiB | 2.95 MiB/s, done.
+From github.com:trombik/jekyll-site-mkrsgh.org
+   a2c699c..a57bc47  devel      -> origin/devel
+```
+
+Your local repository now has the latest `devel`, but not reflected in your
+version of `devel`. Use `git pull` to update your `devel`.
+
+```
+$ git pull
+Updating a2c699c..a57bc47
+Fast-forward
+ Workflow.md | 298 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 298 insertions(+)
+ create mode 100644 Workflow.md
+Current branch devel is up to date.
+```
+
+See the latest commit, which is your commit, by `git log`.
+
+```
+commit a57bc47fbb475646aacad9d45c1b44b2427d15c9 (HEAD -> documentation, origin/devel, origin/HEAD, devel)
+Author: Tomoyuki Sakurai <y@trombik.org>
+Date:   Wed Mar 25 18:07:23 2020 +0900
+
+    doc: document the workflow for mei
+
+commit a2c699c1dad89f5a9ba0ff4ea961fd4f050ec4d1
+Author: Duangmon Loprakhong <mei@Duangmons-MacBook-Pro-4.local>
+Date:   Tue Mar 24 21:32:57 2020 +0700
+
+    Test. I want to eat delicious food!
+...
+```
+
+`git log` shows newest commit first.
+
+Now your `devel` has been updated. You may remove the local branch from the
+local repository because your changes are merged into `devel`.
+
+```
+$ git branch -d documentation
+```
+
+Now you complete the workflow. You repeat this workflow every time you work in
+the repository. Good luck!
 
 ## Branches
 
@@ -294,5 +421,3 @@ the result will be published to the stage site.
 must create a pull request to merge your branch to `devel`. Do NOT commit any
 changes to your local `devel` branch. Always create a new branch from `devel`
 and work in the branch.
-
-
