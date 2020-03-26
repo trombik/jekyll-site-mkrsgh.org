@@ -1,0 +1,57 @@
+---
+layout: default
+title: About us
+permalink: about/
+lang: th
+---
+{% include components/about.html
+    heading_upper = "ของนักประดิษฐ์, โดยนักประดิษฐ์, เพื่อนักประดิษฐ์"
+    heading_lower = "เกี่ยวกับ Makers Guesthouse"
+    img_src = "/img/about.jpg"
+    img_alt = ""
+    content = '
+    <p>ก่อตั้งขึ้นในปี 2020, <em>Makers Guesthouse</em> เป็น
+    Makerspace แห่งแรกในเมืองเสียมเรียบ เราหวังว่าที่แห่งนี้จะเป็นพื้นที่ของเหล่านักสร้างสรรค์ ทั้งแขก
+    คนท้องถิ่น เจ้าของกิจการ ที่นี่คุณจะได้เรียนรู้เทคโนโลยี สร้างสรรค์
+    <strong>นวัตกรรม</strong> ที่ช่วยให้คุณและคนอื่น ๆ ความสนุกสนานในการสร้างสรรค์</p>
+    '
+%}
+{% include check_in_and_out.html %}
+
+{% include components/about.html
+    heading_upper = "กรุณาอ่านและทำความเข้าใจอย่างละเอียด"
+    heading_lower = "ระเบียบของโรงแรม"
+    content = '
+    <ol>
+        <li><strong>ห้ามทิ้งสิ่งของใด ๆ ลงชักโครกโดยเด็ดขาด</strong> หากมีการอุดตันเกิดขึ้นทางเราจะคิดค่าปรับตามจริง</li>
+        <li>ห้ามใช้สารเสพติดทุกชนิด</li>
+        <li>หลีกเลี่ยงการทำเสียงรบกวนแขกท่านอื่น หลัง 22:00น. หากท่านใช้ห้องโถง กรุณาใช้เสียงเบา ๆ </li>
+        <li>ล็อกประตูเสมอเมื่อไม่ได้อยู่ในห้องพัก</li>
+        <li>ห้ามจุดไฟหรือใช้สิ่งของที่ทำให้เกิดประกายไฟในห้องพัก</li>
+        <li>ห้ามสูบบุหรี่ กัญชา รวมถึงบุหรี่ไฟฟ้าภายในอาคาร</li>
+        <li>หากท่านต้องการสูบบุหรี่หรือบุหรี่ไฟฟ้า กรุณาสูบนอกตัวอาคารและทิ้งก้นบุหรี่ลงในที่เขี่ยบุหรี่ที่ทางเราเตรียมไว้ให้เท่านั้น</li>
+        <li>ทางที่พักจะทำความสะอาดห้องทุกวัน ตั้งแต่เวลา 10:30น. ถึง 12:30น.</li>
+        <li>จำนวนผู้เข้าพักสูงสุดในแต่ละห้องต้องไม่เกินจำนวนแขกที่ระบุไว้ตั้งแต่เวลาจอง</li>
+        <li>ห้ามสัตว์เลี้ยงเข้า เว้นแต่สัตว์เลี้ยงช่วยนำทาง (Assistance animals) หากท่านต้องการนำสัตว์เลี้ยงช่วยนำทางมาด้วยกรุณาแจ้งล่วงหน้า</li>
+    </ol>
+    '
+%}
+{% include components/about.html
+    heading_upper = "สั้น ๆ ง่าย ๆ"
+    heading_lower = "ระเบียบเรื่องความเป็นส่วนตัว"
+    content = '
+    <ol>
+        <li>We use Google Analytics on our websites to improve website visitors experience and provide better services. You can opt-out Google Analytics by installing a browser plug-in available at <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">https://tools.google.com/dlpage/gaoptout</a>.</li>
+        <li>Your privacy information is used strictly for booking and services during your stay only.</li>
+        <li>Your privacy information is <strong>NOT</strong> used for our marketing activities unless you explicitly opt-in.</li>
+        <li>Your privacy information is <strong>NOT</strong> be shared by other third-party except the following service providers:
+            <ul>
+                <li>Google for analytics (<a href="https://policies.google.com/privacy" target="_blank">privacy policy</a>)</li>
+                <li>Booking.com for booking management (<a href="https://www.booking.com/content/privacy.html" target="_blank">privacy policy</a>)</li>
+                <li>Cloudbeds for property management (<a href="https://www.cloudbeds.com/privacy-policy/" target="_blank">privacy policy</a>)</li>
+            </ul>
+        </li>
+    </ol>
+    '
+%}
+{% include sns.html %}
