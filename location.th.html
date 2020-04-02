@@ -1,0 +1,76 @@
+---
+layout: default
+title: Store
+lang: th
+permalink: location/
+post_script: |
+   <!-- Script to highlight the active date in the hours list -->
+   <script>
+     $('.list-hours li').eq(new Date().getDay()).addClass('today');
+   </script>
+---
+<section class="post-section clearfix">
+  <div class="container">
+    <div class="intro-text">
+      <div class="col-xl-7 mx-auto bg-faded p-5">
+        <div class="rounded">
+          <h2>Map</h2>
+          <p>View <a href="https://www.openstreetmap.org/?mlat=13.35979&amp;mlon=103.86215#map=19/13.35979/103.86215&amp;layers=N" target="_blank">Larger Map</a>, or <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route=13.4061%2C103.8155%3B13.3599%2C103.8622#map=14/13.3830/103.8393&layers=N" target="_blank">the route from Siem Reap airport</a>.</p>
+              <div class="embed-responsive embed-responsive-4by3">
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=103.86080861091614%2C13.358642590258821%2C103.863482773304%2C13.360936449602569&amp;layer=mapnik&amp;marker=13.359789522656977%2C103.86214569211006" style="border: 1px solid black"></iframe>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include components/cta.html
+    heading_upper = "Makerspace"
+    heading_lower = "เวลาให้บริการ"
+    section_heading_size = "mb-5"
+    content = '<ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                <li class="list-unstyled-item list-hours-item d-flex">
+                  วันอาทิตย์
+                  <span class="ml-auto">ปิดบริการ</span>
+                </li>
+                <li class="list-unstyled-item list-hours-item d-flex">
+                  วันจันทร์
+                  <span class="ml-auto">77.00น. - 20.00น.</span>
+                </li>
+                <li class="list-unstyled-item list-hours-item d-flex">
+                  อังคาร
+                  <span class="ml-auto">7.00น. - 20.00น.</span>
+                </li>
+                <li class="list-unstyled-item list-hours-item d-flex">
+                  วันพุธ
+                  <span class="ml-auto">7.00น. - 20.00น.</span>
+                </li>
+                <li class="list-unstyled-item list-hours-item d-flex">
+                  วันพฤหัสบดี
+                  <span class="ml-auto">7.00น. - 20.00น.</span>
+                </li>
+                <li class="list-unstyled-item list-hours-item d-flex">
+                  วันศุกร์
+                  <span class="ml-auto">7.00น. - 20.00น.</span>
+                </li>
+                <li class="list-unstyled-item list-hours-item d-flex">
+                  วันเสาร์
+                  <span class="ml-auto">9.00น. - 17:00น.</span>
+                </li>
+              </ul>
+              <p class="address mb-5">
+                <em>
+                  <strong>Street 20, Wat Bo road</strong>
+                  <br>
+                  เสียมเรียบ กัมพูชา
+                </em>
+              </p>
+              <p class="mb-0">
+                <small>
+                  <em>โทร.</em>
+                </small>
+                <br>
+                (317) 585-8468 (ตลอด 24 ชั่วโมง)
+              </p>'
+%}
